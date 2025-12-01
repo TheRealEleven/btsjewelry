@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>By-The-Sea Jewelry Designs</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f6f8fa;
+      color: #333;
+    }
+    header {
+      background: url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat;
+      padding: 120px 20px;
+      text-align: center;
+      color: white;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+    }
+    header p {
+      font-size: 1.3rem;
+      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+    }
+    section {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    input {
+      padding: 12px;
+      font-size: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+    }
+    button {
+      padding: 14px;
+      font-size: 1.1rem;
+      background: #0077b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005f8a;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>By-The-Sea Jewelry Designs</h1>
+    <p>Fine jewelry designs with a touch of seaside charm</p>
+  </header>
+
+  <section>
+    <h2 style="text-align:center; margin-bottom:20px;">Join Our Contact List</h2>
+
+    <!-- NOTE: mailto is used for demonstration. A backend or service like Formspree is required for production. -->
+    <form action="mailto:scott@btsjewelrydesigns.com" method="POST" enctype="text/plain">
+      <input type="text" name="Name" placeholder="Your Name" required />
+      <input type="tel" name="Phone" placeholder="Your Phone Number" required />
+      <input type="email" name="Email" placeholder="Your Email Address" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    © <span id="year"></span> By-The-Sea Jewelry Designs. All rights reserved.
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
